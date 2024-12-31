@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HumanBuild - Customize Your 3D Avatar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app-container">
+        <h1>HumanBuild: Create Your Custom 3D Avatar</h1>
+        <div id="controls">
+            <input type="text" id="text-input" placeholder="Enter a description (e.g., tall, blonde)" />
+            <button onclick="generateAvatar()">Generate Avatar</button>
+            <div id="sliders">
+                <label for="height">Height:</label>
+                <input type="range" id="height" min="1.5" max="2.5" step="0.1" value="1.7" />
+                <label for="width">Width:</label>
+                <input type="range" id="width" min="0.5" max="2" step="0.1" value="1" />
+                <!-- Add more sliders for facial features, etc. -->
+            </div>
+        </div>
+        <div id="avatar-container">
+            <canvas id="avatar-canvas"></canvas> <!-- Canvas for 3D model -->
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
